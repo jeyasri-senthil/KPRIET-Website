@@ -6,9 +6,18 @@
     <title>21st Century Engineering College in Coimbatore</title>
 
     <style>
-        #nav1 a {
-            color: #1c5092;
+        *{
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #nav1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        #nav1 a {
+            margin: 0 1px;
+            color: #1c5092;
             font-weight: 900;
             font-size: medium;
             padding: 15px;
@@ -17,12 +26,12 @@
         .card1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 500;
+            text-decoration: none;
         }
         .card-border a {
             text-decoration: none;
         }
         .department, .sdg , .events {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: #1c5092;;
         }
         .department a {
@@ -46,7 +55,6 @@
         }
         .p-3 h4{
             color: #1c5092;;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-weight: 500 bold;
             font-size: larger;
             line-height: 0.7cm;
@@ -74,7 +82,8 @@
             align-items: center;
         }
         .circle p {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 10px;
+            font-size: 14px;
             text-align: center;
             padding: 10px;
             color: white;
@@ -88,7 +97,6 @@
             box-sizing: border-box;
         }
         .column h4 {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-weight: 600 bold;
             font-size: large;
             line-height: 0.5cm;
@@ -109,7 +117,6 @@
             color: rgb(230, 230, 230);
         }
         .container-button {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             border: none;
             padding: 10px 20px;
             background-color: #1b345f;
@@ -148,6 +155,65 @@
             text-decoration: none;
             color: black;
         }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        #carouselExample {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        @media (max-width: 768px) {
+            #nav1 {
+                flex-direction: column;
+                text-align: center;
+            }
+            #nav1 a {
+                margin: 10px 0;
+            }
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                margin-top: 5px;
+            }
+            section {
+                padding: 10px;
+            }
+            p {
+                font-size: 14px;
+            }
+            h5 {
+                font-size: 18px;
+            }
+            p:last-child {
+                font-size: 16px;
+            }
+            #carouselExample {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .circle {
+                background-color: #1b345f;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+            }
+            .circle p {
+                font-size: 14px;
+                text-align: center;
+                padding: 10px;
+                color: white;
+            }
+        }
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -167,15 +233,15 @@
             </div>
             <a href="https://www.kpriet.ac.in/coe">EXAMS</a>
             <a href="https://www.kpriet.ac.in/career-development-centre">CAREER DEVELOPMENT</a>
-            <img src="res/KPRIET Logo 3.png" height="80" width="455px">            
+            <img src="res/KPRIET Logo 3.png" height="80" width="455px" class="img-fluid">            
             <a href="https://www.kpriet.ac.in/kpriet-in-the-media">LIFE AT KPRIET</a>
             <a href="https://www.kpriet.ac.in/#">ADMISSIONS</a>
             <a href="https://www.kpriet.ac.in/#">EXPLORE MORE</a>
-            <img src="res/Search.png" height="35px" width="32px" style="padding-bottom: 1px;">
+            <img src="res/Search.png" height="35px" width="32px" style="padding-bottom: 1px;" class="img-fluid">
         </nav>
 
         <section">
-            <img src="res/KPRIET Website Banner.webp" class="img-fluid" alt="KPRIET Campus">
+            <img src="res/KPRIET Website Banner.webp" class="img-fluid" alt="KPRIET Campus" class="img-fluid">
         </section>
 
         <section class="text-center" style="color: #1b345f; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 500;">
@@ -186,42 +252,37 @@
         </section>
 
         <div class="container">
-            <div class="row my-5 mx-0" style="padding-left: 150px; padding-right: 150px;">
-                <div class="col-md-4 col-sm-12 card-border my-2">
-                    <a href="https://www.kpriet.ac.in/ranking-and-recognition">
-                        <div class="card rounded-1  border-1 p-4" style="min-height:125px; background-color: white;">
-                            <h5 style="color: #238c4a">1st in Coimbatore</h5>
-                            <div class="card1" style="color: #142c4c">Anna University academic performance
-                            </div>
-                        </div>
-                    </a>
+            <div class="row my-5">
+                <div class="col-md-4 col-sm-12 my-2">
+                    <div class="card border-1 p-4" style="min-height:125px; background-color: white;">
+                        <h5 style="color: #238c4a">1st in Coimbatore</h5>
+                        <div class="card-text" style="color: #142c4c">Anna University academic performance</div>
+                        <a href="https://www.kpriet.ac.in/ranking-and-recognition" class="stretched-link"></a>
+                    </div>
                 </div>
-
-                <div class="col-md-4 col-sm-12 card-border my-2">
-                    <a href="https://www.kpriet.ac.in/career-development-centre">
-                        <div class="card rounded-1  border-1 p-4" style="min-height:125px; background-color: white;">
-                            <h5 style="color: #238c4a">6000+ Core Placements</h5>
-                            <div class="card1" style="color: #142c4c">In last 11 batches
-                            </div>
-                        </div>
-                    </a>
+        
+                <div class="col-md-4 col-sm-12 my-2">
+                    <div class="card border-1 p-4" style="min-height:125px; background-color: white;">
+                        <h5 style="color: #238c4a">6000+ Core Placements</h5>
+                        <div class="card-text" style="color: #142c4c">In last 11 batches</div>
+                        <a href="https://www.kpriet.ac.in/career-development-centre" class="stretched-link"></a>
+                    </div>
                 </div>
-
-                <div class="col-md-4 col-sm-12 card-border my-2">
-                    <a href="https://www.kpriet.ac.in/admissions">
-                        <div class="card rounded-1  border-1 p-4" style="min-height:125px; background-color: white;">
-                            <h5 style="color: #238c4a">1st Choice College</h5>
-                            <div class="card1" style="color: #142c4c">For student safety and holistic growth
-                            </div>
-                        </div>
-                    </a>
+        
+                <div class="col-md-4 col-sm-12 my-2">
+                    <div class="card border-1 p-4" style="min-height:125px; background-color: white;">
+                        <h5 style="color: #238c4a">1st Choice College</h5>
+                        <div class="card-text" style="color: #142c4c">For student safety and holistic growth</div>
+                        <a href="https://www.kpriet.ac.in/admissions" class="stretched-link"></a>
+                    </div>
                 </div>
-        </div>
+            </div>
+        </div>        
 
-        <h2 style="font-family:Arial, Helvetica, sans-serif ;text-align: center; color: #1c5092;">TOP HIGHLIGHTS</h2><br>
+        <h2 style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: #1c5092;">TOP HIGHLIGHTS</h2><br>
 
         <section>
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel"  style="padding-left: 150px; padding-right: 150px;">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="res/NIRF 2023.webp" class="d-block w-100" alt="NIRF 2023">
@@ -239,90 +300,92 @@
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Previous">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#=selExample" data-bs-slide="next" aria-label="Next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
-        </section>
-    </div> 
-
-    <br><br>
-    <div class="department" style="padding-left: 235px; padding-right: 235px;">
-        <h6 style="color: black;"><b>YOU CAN CHOOSE</b></h6>
-        <h5><b>What would you like to study?</b></h5><br>
-        <div class="custom-hr"></div>
-        <br>
-        <div class="courses">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3">
+        </section>              
+        
+        <br><br>
+        <div class="container">
+            <div class="department">
+                <h6 style="color: black;"><b>YOU CAN CHOOSE</b></h6>
+                <h5><b>What would you like to study?</b></h5><br>
+                <div class="custom-hr"></div>
+                <br>
+                <div class="courses">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-3">
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/artificial.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/artificial.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/artificial-intelligence-and-data-science">AI and DS</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/bio-medical.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/bio-medical.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/bio-medical-engineering">Biomedical</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/chemical.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/chemical.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/chemical-engineering">Chemical</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/civil.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/civil.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/civil-engineering">Civil</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/computer.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/computer.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/computer-science-engineering">Computer Science</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/aiml.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/aiml.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/cseaiml">Computer Science (AIML)</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/computer.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/computer.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/csbs">CS & Business Systems</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/electronics.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/electronics.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/electronics-and-communications-engineering">Electronics and Communication</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/electrical.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/electrical.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/electrical-and-electronics-engineering">Electrical</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/it.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/it.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/it">Information Technology</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/mechanical.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/mechanical.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/mechanical-engineering">Mechanical</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/mechanical.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/mechanical.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/mechatronics">Mechatronics</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/cultural.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/cultural.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/student-services/cfla">Culture and Arts</a></div>
                 </div>
                 <div class="col p-2 row">
-                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/vocational.png" width="25"></div>
+                    <div class="col-2"><img src="https://www.kpriet.ac.in/asset/frontend/images/homepage/vocational.png" width="25" class="img-fluid"></div>
                     <div class="col-10"><a href="https://www.kpriet.ac.in/student-services/cfla">Vocational Courses</a></div>
                 </div>
             </div>
+            <hr><br>
         </div>
+    </div>
         <hr><br>
     </div>
 
-    <div class="events" style="padding-left: 235px; padding-right: 235px;">
-        <h6 style="color: black;"><b>VISUALIZE</b></h6>
-        <h5><b>Happenings at KPRIET</b></h5><br>
-        <div class="container mt-2">
-            <div class="row row-cols-1 row-cols-lg-3 g-4">
+    <div class="events">
+        <div class="container">
+            <h6 style="color: black;"><b>VISUALIZE</b></h6>
+            <h5><b>Happenings at KPRIET</b></h5><br>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="card">
-                        <img src="res/event1.jpg" class="card-img-top">
+                        <img src="res/event1.jpg" class="card-img-top img-fluid" alt="Event 1 Image">
                         <div class="card-body">
                             <p class="card-text">ALL INDIA SEMINAR ON "REPAIR, REHABILITATION AND RETROFITTING OF RC STRUCTURES"</p><br>
                             <a href="https://www.kpriet.ac.in/happenings/1086/all-india-seminar-on-repair-rehabilitation-and-retrofitting-of-rc-structures" style="color: #1b345f; font-size: 14px;">Read more</a>
@@ -331,40 +394,40 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="res/event2.jpg" class="card-img-top">
+                        <img src="res/event2.jpg" class="card-img-top img-fluid" alt="Event 2 Image">
                         <div class="card-body">
-                            <p class="card-text">THE POWER OF NETWORKING: BUILDING BRIDGES FOR YOUR CAREER.</p><br><br>
+                            <p class="card-text">THE POWER OF NETWORKING: BUILDING BRIDGES FOR YOUR CAREER.</p><br>
                             <a href="https://www.kpriet.ac.in/happenings/1548/the-power-of-networking-building-bridges-for-your-career" style="color: #1b345f; font-size: 14px;">Read more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="res/event3.jpg" class="card-img-top">
+                        <img src="res/event3.jpg" class="card-img-top img-fluid" alt="Event 3 Image">
                         <div class="card-body">
                             <p class="card-text">SKILL SET AWARENESS SESSION ON "THE METAVERSE ANIMATION ODYSSEY: BLENDING REAL AND VIRTUAL WORLDS WITH AR/VR"</p>
                             <a href="https://www.kpriet.ac.in/happenings/1201/skill-set-awareness-session-on-the-metaverse-animation-odyssey-blending-real-and-virtual-worlds-with-arvr" style="color: #1b345f; font-size: 14px;">Read more</a>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div><br><br>
-        <div class="text-end">
-            <a class="container-button" style="padding-right: 50px;" href="https://www.kpriet.ac.in/happenings">View All</a>
+        <div class="text-center">
+            <a class="container-button" href="https://www.kpriet.ac.in/happenings">View All</a>
         </div>
         <br><br>
         <hr>
         <br>
-    </div>
+    </div>    
 
-    <div class="events" style="padding-left: 235px; padding-right: 235px;">
-        <h6 style="color: black;"><b>EXPERIENCES</b></h6>
-        <h5><b>Stories</b></h5><br>
-        <div class="container mt-2">
-            <div class="row row-cols-1 row-cols-lg-3 g-4">
+    <div class="events">
+        <div class="container">
+            <h6 style="color: black;"><b>EXPERIENCES</b></h6>
+            <h5><b>Stories</b></h5><br>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="card">
-                        <img src="res/story1.jpg" class="card-img-top" style="height: 250px;">
+                        <img src="res/story1.jpg" class="card-img-top img-fluid" style="height: 250px;" alt="Story 1 Image">
                         <div class="card-body">
                             <p class="card-text">ROLE OF DME IN AUTOMOBILE INDUSTRIES</p><br>
                             <a href="https://www.kpriet.ac.in/stories/1553/role-of-dme-in-automobile-industries" style="color: #1b345f; font-size: 14px;">Read more</a>
@@ -373,69 +436,70 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="res/story2.jpg" class="card-img-top" style="height: 250px;">
+                        <img src="res/story2.jpg" class="card-img-top img-fluid" style="height: 250px;" alt="Story 2 Image">
                         <div class="card-body">
-                            <p class="card-text">CAREER DEVELOPMENT PROGRAM</p><br><br>
+                            <p class="card-text">CAREER DEVELOPMENT PROGRAM</p><br>
                             <a href="https://www.kpriet.ac.in/stories/1130/career-development-program" style="color: #1b345f; font-size: 14px;">Read more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="res/story3.jpg" class="card-img-top" style="height: 250px;">
+                        <img src="res/story3.jpg" class="card-img-top img-fluid" style="height: 250px;" alt="Story 3 Image">
                         <div class="card-body">
                             <p class="card-text">GUEST LECTURE ON MANAGERIAL SKILLS -LEADERSHIP THEORIES</p><br>
                             <a href="https://www.kpriet.ac.in/stories/1213/guest-lecture-on-managerial-skills-leadership-theories" style="color: #1b345f; font-size: 14px;">Read more</a>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div><br><br>
-        <div class="text-end">
-            <a class="container-button" style="padding-right: 50px;" href="https://www.kpriet.ac.in/stories?id=">View All</a>
+        <div class="text-center">
+            <a class="container-button" href="https://www.kpriet.ac.in/stories?id=">View All</a>
         </div>
         <br><br>
         <hr>
         <br>
-    </div>
+    </div>    
 
-    <div class="sdg" style="padding-left: 235px; padding-right: 235px;">
+    <div class="sdg" style="padding-left: 50px; padding-right: 50px;">
         <h6 style="color: black;"><b>WE SUPPORT, PROMOTE AND CONTRIBUTE</b></h6>
         <h5><b>UN Sustainable Development Goals</b></h5><br>
-        <p>The Sustainable Development Goals (SDGs) provide a common platform where organization, civil society and Government representatives can contribute to solve the world's biggest sustainable development challenges.<br><br>Since the Governing Body is responsible for sustainability at the Institution, KPRIET's Sustainability Committee ensures that we deliver on our commitmentto the objectives of the SDGs through supporting and encouraging collaboration, innovation and engagement across KPRIET community.</p>
+        <p>The Sustainable Development Goals (SDGs) provide a common platform where organization, civil society, and Government representatives can contribute to solving the world's biggest sustainable development challenges.<br><br>Since the Governing Body is responsible for sustainability at the Institution, KPRIET's Sustainability Committee ensures that we deliver on our commitment to the objectives of the SDGs through supporting and encouraging collaboration, innovation, and engagement across KPRIET community.</p>
     </div>
-    <div class="sdg-container" style="padding-left: 235px; padding-right: 235px; margin-top: -80px;">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 align-items-center m-0">
-            <div class="col px-0 left">
+    <div class="sdg-container" style="padding-left: 15px; padding-right: 15px; margin-top: -20px;">
+        <div class="row align-items-center m-0">
+            <div class="col-md-6 px-0 mb-3">
                 <div class="d-flex justify-content-center p-3 my-3">
-                    <div class="p-0" style="max-width: 400px;">
+                    <div class="p-0" style="max-width: 100%;">
                         <div class="wrapper">
-                            <div class="circle" style="margin-bottom: 200px;">
+                            <div class="circle" style="margin-bottom: 20px; margin-left: 100px;  margin-right: 100px;">
                                 <p>256+ MEDIA COVERAGE ON OUR SDG RELATED EVENTS AND ACTIVITIES</p>
                             </div>
                         </div>
                         <br>
                         <div class="wrapper">
-                            <div class="circle" style="margin-top: -200px;">
+                            <div class="circle" style="margin-top: -20px; margin-left: 100px; margin-right: 100px;">
                                 <p>48 POLICIES IMPLEMENTED IN CAMPUS TO SUPPORT UN SDG GOALS</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col px-0 right p-3">
-                <div style="position: relative; text-align: end; margin-right: 50px; margin-top: 170px;">
-                    <img src="res/wheel.png" width="70%">
+            <div class="col-md-6 px-0 p-3">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div style="max-width: 100%;" class="col-md-6 px-0 p-3">
+                        <img src="res/wheel.png" width="100%" class="img-fluid" style="margin-top: 70px;">
+                        <br><br><br>
+                    </div>
+                    <div class="text-center">
+                        <a class="container-button" href="https://www.kpriet.ac.in/sdg">Know More</a>
+                    </div>
                 </div>
-                <br><br><br><br>
-                <div class="text-end">
-                    <a class="container-button" href="https://www.kpriet.ac.in/sdg">Know More</a>
-                </div>
-            </div>                     
+            </div>
         </div>
         <br><br><br>
-    </div>
+    </div>           
 
     <div class="p-0">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 align-items-center m-0">
@@ -450,12 +514,12 @@
                 </div>
             </div>
             <div class="col px-0 right">
-                <img src="res/container1.jpg" width="100%">
+                <img src="res/container1.jpg" width="100%" class="img-fluid">
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 align-items-center m-0">
             <div class="col px-0 left">
-                <img src="res/container2.jpg" width="100%">
+                <img src="res/container2.jpg" width="100%" class="img-fluid">
             </div>
             <div class="col px-0 order-md-1">
                 <div class="d-flex justify-content-center p-3 my-3">
@@ -482,8 +546,8 @@
             <div class="col px-0 right">
                 <div style="position: relative;">
                     <a href="https://youtu.be/i0oycfxohGA?feature=shared" style="display: inline-block; position: relative;">
-                        <img class="youtube-video" width="100%" src="res/youtube-video.jpg">
-                        <img src="res/youtube.png" height="100px" width="100px" style="position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%); opacity: 0.8;">
+                        <img class="youtube-video" width="100%" src="res/youtube-video.jpg" class="img-fluid">
+                        <img src="res/youtube.png" height="100px" width="100px" style="position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%); opacity: 0.8;" class="img-fluid">
                     </a>
                 </div>
             </div>                                              
@@ -496,7 +560,7 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-6">
             <div class="column text-center">
-                <img width="65%" src="https://www.kpriet.ac.in/asset/frontend/images/logo/logo-footer-white.png" style="text-align: center; margin: 60px; margin-left: -20px;">
+                <img width="65%" src="https://www.kpriet.ac.in/asset/frontend/images/logo/logo-footer-white.png" style="text-align: center; margin: 60px; margin-left: -20px;" class="img-fluid">
             </div>
             <div class="column p-3">
                 <h4>QUICK LINKS</h4>
@@ -566,6 +630,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
